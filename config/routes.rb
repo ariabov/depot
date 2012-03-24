@@ -1,6 +1,9 @@
 Depot::Application.routes.draw do
+  get "store/index"
+
   resources :products
 
+  root to: 'store#index', as: 'store' #creates store_path instead of using just default root_path
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
